@@ -8,7 +8,7 @@ package javaapplication10;
 
 /**
  *
- * @author Blanco
+ * @author Blanco & Scott
  */
 public class JavaApplication10 {
 
