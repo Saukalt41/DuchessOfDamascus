@@ -4,12 +4,26 @@
  * and open the template in the editor.
  */
 
-package DuchessOfDamascus;
+package duchessofdamascus;
+
+import byui.cit260.DuchessOfDamascus.model.Player;
 
 /**
  *
- * @author Blanco
+ * @author Stephen
  */
 public class DuchessOfDamascus {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Player playerOne = new Player();
+        
+        playerOne.setName("Fred Flintstone");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+    }
     
 }
