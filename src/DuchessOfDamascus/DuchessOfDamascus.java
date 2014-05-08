@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package duchessofdamascus;
+package DuchessOfDamascus;
 
 import byui.cit260.DuchessOfDamascus.model.Player;
 
 /**
  *
- * @author Stephen
+ * @author Stephen Scott & Bernardo Blanco
  */
 public class DuchessOfDamascus {
 

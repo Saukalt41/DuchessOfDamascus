@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.Objects;
 /**
  *
- * @author Stephen
+ * @author Stephen Scott & Bernardo Blanco
  */
 public class Player implements Serializable{
 
