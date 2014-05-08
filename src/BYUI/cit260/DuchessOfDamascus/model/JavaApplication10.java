@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javaapplication10;
+package BYUI.cit260.DuchessOfDamascus.model;
 
 /**
  *
