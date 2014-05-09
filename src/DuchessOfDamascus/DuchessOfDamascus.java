@@ -85,11 +85,6 @@ public class DuchessOfDamascus {
         String roomsInfo = someRoom.toString();
         System.out.println(roomsInfo);
 
-=======
-        
-        
-        
->>>>>>> origin/master
     }
 
 }
