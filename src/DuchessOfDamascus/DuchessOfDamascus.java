@@ -6,6 +6,7 @@
 
 package DuchessOfDamascus;
 
+import BYUI.cit260.DuchessOfDamascus.model.Location;
 import byui.cit260.DuchessOfDamascus.model.Player;
 
 /**
@@ -18,12 +19,15 @@ public class DuchessOfDamascus {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player playerOne = new Player();
+        Location playerOne = new Location();
         
-        playerOne.setName("Fred Flintstone");
+        playerOne.setLocation("The Crypt");
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        
+        
     }
     
 }
