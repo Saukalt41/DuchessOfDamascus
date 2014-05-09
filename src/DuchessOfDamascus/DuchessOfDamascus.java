@@ -10,6 +10,8 @@ import BYUI.cit260.DuchessOfDamascus.model.Game;
 import BYUI.cit260.DuchessOfDamascus.model.Menu;
 import BYUI.cit260.DuchessOfDamascus.model.Orb;
 import BYUI.cit260.DuchessOfDamascus.model.Rooms;
+import BYUI.cit260.DuchessOfDamascus.model.Location;
+
 import byui.cit260.DuchessOfDamascus.model.Player;
 
 /**
@@ -23,13 +25,18 @@ public class DuchessOfDamascus {
      */
     public static void main(String[] args) {
 
+
         //Player    
         Player playerOne = new Player();
 
         playerOne.setName("Fred Flintstone");
-
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+
+        Location location = new Location();  
+        location.setLocation("The Crypt");
+        
+
 
         //Clues
         Clues Clue = new Clues();
@@ -78,6 +85,11 @@ public class DuchessOfDamascus {
         String roomsInfo = someRoom.toString();
         System.out.println(roomsInfo);
 
+=======
+        
+        
+        
+>>>>>>> origin/master
     }
 
 }
