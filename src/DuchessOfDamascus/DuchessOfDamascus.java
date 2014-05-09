@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DuchessOfDamascus;
 
 import BYUI.cit260.DuchessOfDamascus.model.Clues;
@@ -23,61 +22,62 @@ public class DuchessOfDamascus {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    //Player    
+
+        //Player    
         Player playerOne = new Player();
-        
+
         playerOne.setName("Fred Flintstone");
-        
+
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
-        
-    //Clues
+
+        //Clues
         Clues Clue = new Clues();
-        
+
         Clue.setName("Look Up!");
-        
+
         String cluesInfo = Clue.toString();
         System.out.println(cluesInfo);
-    
-    //Orb
+
+        //Orb
         Orb orb = new Orb();
-        
+
         orb.setPart(1);
         orb.setCompleted("Orb not completed");
-        
+
         String orbInfo = orb.toString();
         System.out.println(orbInfo);
-        
-    //Game
+
+        //Game
         Game newGame = new Game();
-        
+
         newGame.setTime("3:15 pm");
         newGame.setTimePlayed("1Hr 26Min 13Sec Played");
-        
+
         String GameInfo = newGame.toString();
         System.out.println(GameInfo);
-        
-    //Menu
+
+        //Menu
         Menu gameMenu = new Menu();
-        
+
         gameMenu.setMenuType("Game Menu"
                 + "[N]ew Game"
                 + "[Q]uit Game"
                 + "[H]elp");
-        
+
         String MenuInfo = gameMenu.toString();
         System.out.println(MenuInfo);
-        
-    //Room
+
+        //Room
         Rooms someRoom = new Rooms();
-        
+
         someRoom.setActive("Not Active");
         someRoom.setType("Orb Room Type");
         someRoom.setVisited("Visited");
-        
+
         String roomsInfo = someRoom.toString();
         System.out.println(roomsInfo);
-        
+
     }
-    
+
 }
