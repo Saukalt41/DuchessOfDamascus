@@ -5,16 +5,14 @@
  */
 package DuchessOfDamascus;
 
-import BYUI.cit260.DuchessOfDamascus.control.cryptControl;
-
-import BYUI.cit260.DuchessOfDamascus.control.cryptControl.ghostRoll;
+import BYUI.cit260.DuchessOfDamascus.control.YahtzeeControl;
 import BYUI.cit260.DuchessOfDamascus.model.Clues;
 import BYUI.cit260.DuchessOfDamascus.model.Game;
 import BYUI.cit260.DuchessOfDamascus.model.Location;
 import BYUI.cit260.DuchessOfDamascus.model.Menu;
 import BYUI.cit260.DuchessOfDamascus.model.Orb;
 import BYUI.cit260.DuchessOfDamascus.model.Rooms;
-import byui.cit260.DuchessOfDamascus.model.Player;
+import BYUI.cit260.DuchessOfDamascus.model.Player;
 
 /**
  *
@@ -38,7 +36,7 @@ public class DuchessOfDamascus {
         Location location = new Location();  
         location.setLocation("The Crypt");
         
-        cryptControl ghostRoll = new ghostRoll();
+       
         
 
 

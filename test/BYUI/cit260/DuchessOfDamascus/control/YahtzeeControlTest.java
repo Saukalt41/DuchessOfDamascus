@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Blanco
+ * @author Stephen
  */
 public class YahtzeeControlTest {
     
@@ -19,32 +19,27 @@ public class YahtzeeControlTest {
     }
 
     /**
+     * Test of toString method, of class YahtzeeControl.
+     */
+    
+  
+
+    /**
      * Test of trackPoints method, of class YahtzeeControl.
      */
     @Test
     public void testTrackPoints() {
-        
-        /********************
-         * Test Case 1
-         *******************/
-        System.out.println("Test Case trackPoints");
-        
-        //input values for test case 1
-        double playerScore = 0.0;
-        double npcScore = 0.0;
-        double playerNewWinCount = playerScore +1;
-        double npcNewWinCount = 0.0;
-        
+        System.out.println("trackPoints");
+        double playerScore = 22.0;
+        double npcScore = 36.0;
+        double playerNewWinCount = 0.0;
+        double npcNewWinCount = 1.0;
         YahtzeeControl instance = new YahtzeeControl();
-        
-        double expResult = 0;
-        
+        double expResult = 0.0;
         double result = instance.trackPoints(playerScore, npcScore, playerNewWinCount, npcNewWinCount);
-       
-        
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
     
 }
