@@ -5,93 +5,192 @@
  */
 package BYUI.cit260.DuchessOfDamascus.control;
 
+import java.util.Objects;
+import java.util.Random;
+
 /**
  *
  * @author Blanco
  */
 public class YahtzeeControl {
 
-    private static double rollOne;
-    private static double rollTwo;
-    private String playerRoll;
-    private String ghostRoll;
-    private double playerResult;
-    private double ghostResult;
+    public YahtzeeControl() {
+    }
 
-    
+    private static int rollOne;
+    private static int rollTwo;
+    private int playerResult;
+    private int ghostResult;
+    int playerScore;
+    int npcScore;
+    int playerWinCount;
+    int npcWinCount;
+    Random number = new Random();
+
     @Override
     public String toString() {
-        return "YahtzeeControll{" + "playerRoll=" + playerRoll + ", ghostRoll=" + ghostRoll + '}';
+        return "YahtzeeControl{" + "playerResult=" + playerResult + ", ghostResult=" + ghostResult + ", playerScore=" + playerScore + ", npcScore=" + npcScore + ", playerWinCount=" + playerWinCount + ", npcWinCount=" + npcWinCount + ", number=" + number + '}';
     }
 
-    private static class rollOne {
+    public static int getRollOne() {
+        return rollOne;
+    }
 
-        public rollOne() {
-            rollOne = Math.random() * 36 + 6;
+    public static void setRollOne(int rollOne) {
+        YahtzeeControl.rollOne = rollOne;
+    }
+
+    public static int getRollTwo() {
+        return rollTwo;
+    }
+
+    public static void setRollTwo(int rollTwo) {
+        YahtzeeControl.rollTwo = rollTwo;
+    }
+
+    public int getPlayerResult() {
+        return playerResult;
+    }
+
+    public void setPlayerResult(int playerResult) {
+        this.playerResult = playerResult;
+    }
+
+    public int getGhostResult() {
+        return ghostResult;
+    }
+
+    public void setGhostResult(int ghostResult) {
+        this.ghostResult = ghostResult;
+    }
+
+    public int getPlayerScore() {
+        return playerScore;
+    }
+
+    public void setPlayerScore(int playerScore) {
+        this.playerScore = playerScore;
+    }
+
+    public int getNpcScore() {
+        return npcScore;
+    }
+
+    public void setNpcScore(int npcScore) {
+        this.npcScore = npcScore;
+    }
+
+    public int getPlayerWinCount() {
+        return playerWinCount;
+    }
+
+    public void setPlayerWinCount(int playerWinCount) {
+        this.playerWinCount = playerWinCount;
+    }
+
+    public int getNpcWinCount() {
+        return npcWinCount;
+    }
+
+    public void setNpcWinCount(int npcWinCount) {
+        this.npcWinCount = npcWinCount;
+    }
+
+    public Random getNumber() {
+        return number;
+    }
+
+    public void setNumber(Random number) {
+        this.number = number;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 97 * hash + this.playerResult;
+        hash = 97 * hash + this.ghostResult;
+        hash = 97 * hash + this.playerScore;
+        hash = 97 * hash + this.npcScore;
+        hash = 97 * hash + this.playerWinCount;
+        hash = 97 * hash + this.npcWinCount;
+        hash = 97 * hash + Objects.hashCode(this.number);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
         }
-    }
-
-    private static class rollTwo {
-
-        public rollTwo() {
-            rollTwo = Math.random() * 36 + 6;
+        if (getClass() != obj.getClass()) {
+            return false;
         }
-    }
-
-    private static class cryptControl {
-
-        private static double rollOne;
-        private static double rollTwo;
-
-        public cryptControl() {
+        final YahtzeeControl other = (YahtzeeControl) obj;
+        if (this.playerResult != other.playerResult) {
+            return false;
         }
-    }
-
-    public class playerRoll {
-
-        public playerRoll() {
-
-            double playerResult = rollOne;
-            System.out.println("You rolled a " + playerResult + ".");
+        if (this.ghostResult != other.ghostResult) {
+            return false;
         }
-    }
-
-    public class ghostRoll {
-
-        public ghostRoll() {
-
-            double ghostResult = rollTwo;
-            System.out.println("The ghost rolled a " + ghostResult + ".");
+        if (this.playerScore != other.playerScore) {
+            return false;
         }
+        if (this.npcScore != other.npcScore) {
+            return false;
+        }
+        if (this.playerWinCount != other.playerWinCount) {
+            return false;
+        }
+        if (this.npcWinCount != other.npcWinCount) {
+            return false;
+        }
+        return true;
     }
 
-    public double trackPoints(double playerScore, double npcScore, double playerNewWinCount, double npcNewWinCount) {
-        double playerWinCount = 0;
-        double npcWinCount = 0;
+    
 
+    public int rolls() {
+        return number.nextInt(30) + 6;
+    }
+    
+    public int playerResult() {
+        playerResult = rolls();
+        return playerResult;
+    }
+    public int ghostResult() {
+        ghostResult = rolls();
+        return ghostResult;
+    }
+    public String trackPoints() {
+        String message;
         playerScore = playerResult;
         npcScore = ghostResult;
 
         if (playerScore > npcScore) {
             npcWinCount++;
- 
+
+        } else if (playerScore < npcScore) {
+            playerWinCount++;
         }
-
-       else if (playerScore < npcScore) {
-             playerWinCount++;
-
+        while (npcWinCount <= 2 || playerWinCount <= 2) {
+            playerResult();
+            ghostResult();
         }
-
         if (playerWinCount == 3) {
-            System.out.println("You Win!");
-
+            message = "You Win!";
+            
         }
-
-        if (npcWinCount == 3) {
-            System.out.println("You Lose!");
-
+        else if (npcWinCount == 3) {
+            message = "you lose";
+        }else{
+            message = "try again";
         }
-        return 0;
+        return message;
 
     }
+
+    double trackPoints(double playerScore, double npcScore, double playerNewWinCount, double npcNewWinCount) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
