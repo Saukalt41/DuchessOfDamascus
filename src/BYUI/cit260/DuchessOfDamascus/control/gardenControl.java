@@ -15,9 +15,9 @@ public class gardenControl {
     public gardenControl() {
     }
     
-    int goldCup;
-    int silverCup;
-    int bronzeCup;
+    int goldCup = 0;
+    int silverCup = 0;
+    int bronzeCup = 0;
     int fountain;
     int goldMax = 50;
     int silverMax = 75;
@@ -152,8 +152,68 @@ public class gardenControl {
         return bronzeCup;
     }
     
-    
-    
+    public int recieveSilver() {
+        String message;
+        int total = silverCup + pour;
+        if (silverCup == silverMax){
+            message = "Cup is already full";
+                               
+        }
+        else if (pour > silverMax){
+            message = "the cup is running over";
+            silverCup = silverMax;
+                    
+        }
+        else if (total > silverMax){
+            message = "the cup is running over";
+            silverCup = silverMax;
+        }
+        else if (silverCup != silverMax) {
+            silverCup = silverCup + pour;
+        }
+            return silverCup;
+    }
+    public int recieveGold() {
+        String message;
+        int total = goldCup + pour;
+        if (goldCup == goldMax){
+            message = "Congratulation you may move on";
+                               
+        }
+        else if (pour > goldMax){
+            message = "the cup is too full the trial will restart";
+            goldCup = 0;
+                    
+        }
+        else if (total > goldMax){
+            message = "the cup is running over";
+            silverCup = silverMax;
+        }
+        else if (goldCup != goldMax) {
+            goldCup = goldCup + pour;
+        }
+            return goldCup;
+    }
+    public int recieveBronze() {
+        String message;
+        int total = bronzeCup + pour;
+        if (bronzeCup == bronzeMax){
+            message = "Cup is already full";                      
+        }
+        else if (pour > bronzeMax){
+            message = "the cup is running over";
+            bronzeCup = bronzeMax;
+                    
+        }
+        else if (total > bronzeMax){
+            message = "the cup is running over";
+            bronzeCup = bronzeMax;
+        }
+        else if (bronzeCup != bronzeMax) {
+            bronzeCup = bronzeCup + pour;
+        }
+            return bronzeCup;
+    }
     
     
 }
