@@ -21,13 +21,28 @@ public class StartProgramView {
                 
    }
 public void displayBanner(){
-    System.out.println("\n\n********************************************");
+    System.out.println("\n\n***************************************************");
     
-    System.out.println("*                                          *"
+    System.out.println("*                                                 *"
             + "\n* This games is about the Duchess of Damscus and  *"
             + "\n* her journey through the Temple of the Sun.      *"
             + "\n* In this game you will face several trials meant *"
-            + "\n* to test your skill and wit. Good luck adventuror*");
+            + "\n* to test your skill and wit.                     *");
+    
+    System.out.println("*                                          *"
+            + "\n* You will need to work your way through the      *"
+            + "\n* temple solving various puzzles and collecting   *"
+            + "\n* parts of the Solis Orb and number to the secret *"
+            + "\n* code. There are three paths you may take. You   *"
+            + "\n* can choose the order in which you venture down  *"
+            + "\n* them, but you must complete the challenges in   *"
+            + "\n* all the rooms in order to escape. After         *"
+            + "\n* completing the orb you will have one final      *"
+            + "\n* challenge.");
+    
+    System.out.println("*                                                 *"
+            + "\n* Good luck, and may the Sun God look down on you *"
+            + "\n* with mercy.                                     *");
 }    
  
 
