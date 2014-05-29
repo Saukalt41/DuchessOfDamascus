@@ -6,6 +6,8 @@
 
 package BYUI.cit260.DuchessOfDamascus.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Stephen
@@ -27,5 +29,17 @@ public void displayBanner(){
             + "\n* In this game you will face several trials meant *"
             + "\n* to test your skill and wit. Good luck adventuror*");
 }    
+ 
+
+public String getPlayersName(){
+    boolean valid = false; //This will tell us if the name has been acquired
+    String playersName = null;
+    Scanner keyboard = new Scanner(System.in); // This allows us to use the keyboard to input something in the game
     
+    while(!valid) { // while a name has not yet been entered
+     
+        
+        
+    }
+}
 }
