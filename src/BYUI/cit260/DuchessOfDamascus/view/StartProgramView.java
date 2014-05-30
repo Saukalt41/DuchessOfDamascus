@@ -5,7 +5,7 @@
  */
 package BYUI.cit260.DuchessOfDamascus.view;
 
-import BYUI.cit260.DuchessOfDamascus.control.ProgramControl;
+
 
 import BYUI.cit260.DuchessOfDamascus.model.Player;
 import java.util.Scanner;
@@ -15,6 +15,7 @@ import java.util.Scanner;
  * @author Stephen & Bernardo
  */
 public class StartProgramView {
+
 
     public void startProgram() {
 
@@ -99,5 +100,6 @@ public class StartProgramView {
         System.out.println("==============================");
 
     }
+
 
 }
