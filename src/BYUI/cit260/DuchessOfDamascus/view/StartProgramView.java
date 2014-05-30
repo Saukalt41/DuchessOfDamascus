@@ -18,6 +18,13 @@ public class StartProgramView {
        
        //Display the banner screen
        this.displayBanner();
+       
+       // prompt the player to enter their name. Retrieve the name of the player
+       String playersName = this.getPlayersName();
+       if (playersName == null)
+           return;
+       
+       Player player = BYUI.cit260.DuchessOfDamascus.control.ProgramControl.createPlayer(playersName);
                 
    }
 public void displayBanner(){
