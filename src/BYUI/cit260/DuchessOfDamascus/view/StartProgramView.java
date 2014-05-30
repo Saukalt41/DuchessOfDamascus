@@ -6,6 +6,7 @@
 
 package BYUI.cit260.DuchessOfDamascus.view;
 
+import BYUI.cit260.DuchessOfDamascus.model.Player;
 import java.util.Scanner;
 
 /**
@@ -25,7 +26,11 @@ public class StartProgramView {
            return;
        
        Player player = BYUI.cit260.DuchessOfDamascus.control.ProgramControl.createPlayer(playersName);
-                
+       
+       this.displayWelcomeMessage(player);
+       
+       MainMenuView mainMenuView = new MainMenuView();
+       mainMenuView.displayMenu();3
    }
 public void displayBanner(){
     System.out.println("\n\n***************************************************");
@@ -63,5 +68,6 @@ public String getPlayersName(){
         
         
     }
+return playersName;
 }
 }
