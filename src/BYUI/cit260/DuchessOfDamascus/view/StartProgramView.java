@@ -6,20 +6,72 @@
 
 package BYUI.cit260.DuchessOfDamascus.view;
 
+import BYUI.cit260.DuchessOfDamascus.control.ProgramControl;
+import BYUI.cit260.DuchessOfDamascus.model.Player;
 import java.util.Scanner;
 
 /**
  *
- * @author Stephen
+ * @author Stephen & Bernardo
  */
 public class StartProgramView {
     
+    
    public void startProgram(){
        
-       //Display the banner screen
-       this.displayBanner();
+  //Display the banner screen
+   this.displayBanner();
                 
    }
+  //prompt the player to enter their name. Retrieve the name of the player
+   String playersName = this.getPlayersName();
+   if playersName == null //user wants to quit
+      return; //exit the game
+   
+   //Create player & Save in control class
+   Player player = ProgramControl.createPlayer(playersName);
+   
+   //Display personalized welcoming message
+   this.displayWelcomeMessage();
+   
+   //Display Main Menu
+   
+  MainMenuView MainMenuView = new MainMenuView();
+  MainMenuView.displayMenu();
+   
+
+public String getPlayersName(){
+    boolean valid = false; //This will tell us if the name has been acquired
+    String playersName = null;
+    Scanner keyboard = new Scanner(System.in); // This allows us to use the keyboard to input something in the game
+    
+    while(!valid) { // while a name has not yet been entered
+     
+   // Ask user for the player's name
+        System.out.println("Hey Duchess! What's your name?");
+        
+   // Receive name from the keyboard and trim blanks
+        playersName = keyboard.nextLine();
+        playersName = playersName.trim();
+        
+        if (playersName.toUpperCase().equals("Q")) { //Quitting ?
+          return null;
+       
+   // Name is invalid (non-blank or less than two characters)
+        if (playersName.length()<2) {
+           //display error
+            System.out.println("Invalid name - the name must be non blank"
+                             + "and greater than one character in length");
+        }
+        else {
+            valid = true; //Valid name entered
+        }
+   }     
+        
+    }
+    return playersName; //return the name
+}
+
 public void displayBanner(){
     System.out.println("\n\n***************************************************");
     
@@ -45,16 +97,12 @@ public void displayBanner(){
             + "\n* with mercy.                                     *");
 }    
  
-
-public String getPlayersName(){
-    boolean valid = false; //This will tell us if the name has been acquired
-    String playersName = null;
-    Scanner keyboard = new Scanner(System.in); // This allows us to use the keyboard to input something in the game
-    
-    while(!valid) { // while a name has not yet been entered
-     
-        
-        
-    }
+public void displayWelcomeMessage(Player player){
+    System.out.println("\n\n==============================");
+    System.out.println("\tWelcome to the game" + player.getName());
+    System.out.println("\tWe hope you enjoy the game!");
+    System.out.println("==============================");
 }
+
+   
 }
