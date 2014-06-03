@@ -22,6 +22,16 @@ import BYUI.cit260.DuchessOfDamascus.view.StartProgramView;
 public class DuchessOfDamascus {
     
     private static Player player = null;
+    private static Game currentGame = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        DuchessOfDamascus.currentGame = currentGame;
+    }
+    
 
     public DuchessOfDamascus() {
     }
