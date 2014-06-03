@@ -7,6 +7,8 @@
 package BYUI.cit260.DuchessOfDamascus.control;
 
 import BYUI.cit260.DuchessOfDamascus.model.Player;
+import DuchessOfDamascus.DuchessOfDamascus;
+
 
 /**
  *
@@ -15,10 +17,15 @@ import BYUI.cit260.DuchessOfDamascus.model.Player;
 * @author Stephen
  */
 public class ProgramControl {
-
+    static Player player;
+    
     public static Player createPlayer(String playersName) {
-        System.out.println("createPlayer function called"); 
-        return null;
+        System.out.println("createPlayer function called");
+        Player player = new Player();
+        player.setName(playersName);
+        
+        DuchessOfDamascus.setPlayer(player);
+        return player;
 
     }
     
