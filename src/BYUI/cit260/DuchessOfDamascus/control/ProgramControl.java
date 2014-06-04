@@ -6,6 +6,7 @@
 
 package BYUI.cit260.DuchessOfDamascus.control;
 
+import BYUI.cit260.DuchessOfDamascus.model.Game;
 import BYUI.cit260.DuchessOfDamascus.model.Player;
 import DuchessOfDamascus.DuchessOfDamascus;
 
@@ -27,6 +28,10 @@ public class ProgramControl {
         DuchessOfDamascus.setPlayer(player);
         return player;
 
+    }
+
+    public static void saveGame(Game currentGame) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
