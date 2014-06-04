@@ -23,6 +23,7 @@ public class MainMenuView {
             + "\nG - Start game                             |"
             + "\nH - Get help on how to play the game       |"
             + "\nS - Save Game                              |"
+            + "\nL - Load Game                              |"
             + "\nE - Exit                                   |"
             + "\n--------------------------------------------";
     
@@ -83,6 +84,9 @@ public class MainMenuView {
                 break;
             case 'S':
                 ProgramControl.saveGame(DuchessOfDamascus.getCurrentGame());
+                break;
+            case 'L':
+                ProgramControl.loadGame(DuchessOfDamascus.getCurrentGame());
                 break;
             case 'E':
                 return;

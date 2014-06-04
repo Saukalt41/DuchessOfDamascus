@@ -31,7 +31,7 @@ public class DuchessOfDamascus {
     public static void setCurrentGame(Game currentGame) {
         DuchessOfDamascus.currentGame = currentGame;
     }
-    
+   
 
     public DuchessOfDamascus() {
     }
@@ -57,9 +57,7 @@ public class DuchessOfDamascus {
 
     
 
-    private static void ghostRoll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     
     
