@@ -8,9 +8,14 @@ package BYUI.cit260.DuchessOfDamascus.view;
 
 /**
  *
- * @author Stephen
+ * @author Bernardo Blanco
  */
 class GameMenuView {
+    
+    private static final String GameMenu = "\n"
+            + "\n-------------------------------"
+            + "\n | Game Menu |"
+            + "\n-------------------------------"
 
     void displayMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

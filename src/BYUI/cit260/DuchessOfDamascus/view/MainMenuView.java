@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Blanco
+ * @author Bernardo Blanco
  */
 public class MainMenuView {
     
