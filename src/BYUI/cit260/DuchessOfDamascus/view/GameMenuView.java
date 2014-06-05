@@ -75,18 +75,17 @@ class GameMenuView {
         
         switch (choice){
             case 'S':
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
-                break;
-            case 'I':
-                HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayMenu();
-                break;
-            case 'M':
                 ProgramControl.saveGame(DuchessOfDamascus.getCurrentGame());
                 break;
+            case 'I':
+                System.out.println("\n*** This will call out our InventoryView");
+                break;
+            case 'M':
+                System.out.println("\n*** This will call out our MapView");
+                break;
             case 'H':
-                ProgramControl.loadGame(DuchessOfDamascus.getCurrentGame());
+                HelpMenuView helpMenu = new HelpMenuView();
+                helpMenu.displayMenu();
                 break;
             case 'E':
                 return;
