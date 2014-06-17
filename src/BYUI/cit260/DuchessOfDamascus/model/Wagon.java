@@ -4,15 +4,12 @@
  * and open the template in the editor.
  */
 
-package BYUI.cit260.DuchessOfDamascus.control;
+package BYUI.cit260.DuchessOfDamascus.model;
 
 /**
  *
  * @author Blanco
  */
-public class Constants {
-    static int ORE;
-  
-    public final 
-            
+class Wagon {
+    
 }

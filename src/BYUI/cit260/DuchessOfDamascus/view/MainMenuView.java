@@ -6,6 +6,7 @@
 
 package BYUI.cit260.DuchessOfDamascus.view;
 
+import BYUI.cit260.DuchessOfDamascus.control.GameControl;
 import BYUI.cit260.DuchessOfDamascus.control.ProgramControl;
 import DuchessOfDamascus.DuchessOfDamascus;
 import java.util.Scanner;
@@ -75,8 +76,7 @@ public class MainMenuView {
         
         switch (choice){
             case 'G':
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
+                this.startNewGame();
                 break;
             case 'H':
                 HelpMenuView helpMenu = new HelpMenuView();
@@ -94,6 +94,15 @@ public class MainMenuView {
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
+    }
+
+    private void startNewGame() {
+        //create a new game
+        GameControl.createNewGame(DuchessOfDamascus.getPlayer());
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
     
 }

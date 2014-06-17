@@ -6,13 +6,16 @@
 
 package BYUI.cit260.DuchessOfDamascus.control;
 
+import BYUI.cit260.DuchessOfDamascus.model.Game;
+
 /**
  *
  * @author Blanco
  */
-public class Constants {
-    static int ORE;
-  
-    public final 
-            
+class DuchessOfDamascuss {
+
+    static void setCurrentGame(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

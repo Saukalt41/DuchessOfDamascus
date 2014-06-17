@@ -6,11 +6,16 @@
 
 package BYUI.cit260.DuchessOfDamascus.control;
 
+import BYUI.cit260.DuchessOfDamascus.model.Game;
+import BYUI.cit260.DuchessOfDamascus.model.Player;
+import DuchessOfDamascus.DuchessOfDamascus;
+
 /**
  *
  * @author Blanco
  */
-public class GameControls {
+public class GameControl {
+    private static InventoryItem[] Inventory;
             
     public static void StartNewGame() {
         //Create New Game
@@ -21,8 +26,9 @@ public class GameControls {
         
         //set (save) the player in the game object
         GameControl.game.setPlayer(DuchessOfDamascus.getPlayer());
-         
-        GameControl.createInventoryList(); //create the inventory list
+        
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
+        GameControl.game.createInventoryList(inventoryList); //create the inventory list
         GameControl.createMap(); //create the map
         GameControl.createLocations(); //create locations inside the map
         GameControl.createCluesList(); //create list of clues
@@ -46,8 +52,31 @@ public class GameControls {
     }
     
     private static void createMap(){
-        System.out.println("\n**** Calling createMap stub function ****");
+        System.out.println("\n**** Calling createMap stub function ****");   
+                }
+
+    public static void createNewGame(Player player) {
+     System.out.println("\n**** Calling createNewGame stub function ****");
     }
-    
+
+        private static Game game;
+
+
+        private static void createLocations() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private static void createCluesList() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public GameControl() {
+        }
+
+    private static class InventoryItem {
+
+        public InventoryItem() {
+        }
     }
-}
+    }
+

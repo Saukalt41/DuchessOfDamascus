@@ -6,6 +6,8 @@
 
 package BYUI.cit260.DuchessOfDamascus.model;
 
+
+import BYUI.cit260.DuchessOfDamascus.control.GameControl;
 import java.io.Serializable;
 import java.util.Objects;
 /**
@@ -15,17 +17,46 @@ import java.util.Objects;
 public class Game implements Serializable{
    
     //Class Intance Variables
-    private String time;
+    private double time;
     private String timePlayed;
+    private InventoryItem[] inventory;
+    private Player player;
+    private Wagon wagon;
+    private Map map;
+
+    public InventoryItem[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
+    }
+
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
 
     public Game() {
     }
     
-    public String getTime() {
+    public double getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Double time) {
         this.time = time;
     }
 
@@ -65,8 +96,26 @@ public class Game implements Serializable{
         if (!Objects.equals(this.timePlayed, other.timePlayed)) {
             return false;
         }
-        return true;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
+    public void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setInventory(BYUI.cit260.DuchessOfDamascus.control.InventoryItem[] Inventory) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void createInventoryList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void createInventoryList(GameControl.InventoryItem[] inventoryList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
     
