@@ -77,7 +77,7 @@ class HelpMenuView {
         switch (choice){
             case 'B':
                 MainMenuView mainMenu = new MainMenuView();
-                mainMenu.displayMenu();
+                mainMenu.display();
                 break;
             
             default:
