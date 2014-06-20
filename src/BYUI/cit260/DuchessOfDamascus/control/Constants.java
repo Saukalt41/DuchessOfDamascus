@@ -10,9 +10,9 @@ package BYUI.cit260.DuchessOfDamascus.control;
  *
  * @author Blanco
  */
-public class Constants {
-    static int ORE;
-  
-    public final 
-            
-}
+//public class Constants {
+//    static int ORE;
+//  
+//    public final 
+//            
+//}

@@ -8,8 +8,12 @@ package BYUI.cit260.DuchessOfDamascus.view;
 
 /**
  *
- * @author Blanco
+ * @author Stephen
  */
+
 public interface ViewInterface {
-    
+    public void display();
+    public String getInput();
+    public void doAction(String value);
+      
 }
