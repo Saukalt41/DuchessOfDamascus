@@ -7,7 +7,6 @@
 package BYUI.cit260.DuchessOfDamascus.model;
 
 
-import BYUI.cit260.DuchessOfDamascus.control.GameControl;
 import java.io.Serializable;
 import java.util.Objects;
 /**
@@ -96,7 +95,7 @@ public class Game implements Serializable{
         if (!Objects.equals(this.timePlayed, other.timePlayed)) {
             return false;
         }
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); //Comparing Game times
     }
 
 
