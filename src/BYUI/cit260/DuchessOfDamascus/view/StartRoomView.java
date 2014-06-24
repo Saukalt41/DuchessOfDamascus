@@ -16,7 +16,7 @@ public class StartRoomView extends View {
     public StartRoomView() {
         super("\n"
                 + "\n************************************************"
-                + "\n| Welcome" + DuchessOfDamascus.getPlayer().getName() + "."
+                + "\n| Welcome " + DuchessOfDamascus.getPlayer().getName() + "."
                 + "\n| You have entered the first room of the temple "
                 + "\n| of the sun. Here you have three paths to "
                 + "\n| choose from. In order to escape you must "
