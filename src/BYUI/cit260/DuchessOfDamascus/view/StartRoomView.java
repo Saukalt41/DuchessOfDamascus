@@ -58,7 +58,7 @@ public class StartRoomView extends View {
 
     private void goToMenu() {
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 
     private void goToFirstPath() {

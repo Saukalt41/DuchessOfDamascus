@@ -14,9 +14,9 @@ import java.util.Scanner;
  *
  * @author Bernardo Blanco
  */
-class GameMenuView {
-    
-    private static final String GameMenu = "\n"
+class GameMenuView extends View{
+    public GameMenuView(){
+    super ("\n"
             + "\n-------------------------------"
             + "\n| Game Menu                   |"
             + "\n-------------------------------"
@@ -25,55 +25,13 @@ class GameMenuView {
             + "\nM - Map                       |"
             + "\nH - Help                      |"
             + "\nE - Exit                      |"
-            + "\n-------------------------------";
-
-    void displayMenu(){
-        //Not yet finished
-        char selection = ' ';
-        do {
-            
-            System.out.println(GameMenu);
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-        } while (selection != 'E');
-        }
-    
-    public String getInput() {
-        boolean valid = false; //This will tell us if the name has been acquired
-        String menuChoice = null;
-        Scanner keyboard = new Scanner(System.in); // This allows us to use the keyboard to input something in the game
-
-        while (!valid) { // while a name has not yet been entered
-
-            // Ask user for the player's name
-            System.out.println("Choose a menu option:");
-
-            // Receive name from the keyboard and trim blanks
-            menuChoice = keyboard.nextLine();
-            menuChoice = menuChoice.trim();
-            menuChoice = menuChoice.toUpperCase();
-
-            if (menuChoice.toUpperCase().equals("E")) { //Quitting ?
-                return null;
-            }
-            // Name is invalid (non-blank or less than two characters)
-            if (menuChoice == "S" || menuChoice == "I" || menuChoice == "M" || menuChoice == "H" || menuChoice == "E") {
-                //display error
-                System.out.println(menuChoice + " is not a valid choice."
-                        + "\nPlease choose S, I, M, H or E.");
-            } else {
-                valid = true; //Valid name entered
-            }
-            
-        }
-        return menuChoice; //return the name    
+            + "\n-------------------------------");
     }
-    public void doAction(char choice) {
+    
+    @Override
+    public void doAction(String choice) {
         
-        switch (choice){
+        switch (choice.trim().toUpperCase().charAt(0)){
             case 'S':
                 ProgramControl.saveGame(DuchessOfDamascus.getCurrentGame());
                 break;
