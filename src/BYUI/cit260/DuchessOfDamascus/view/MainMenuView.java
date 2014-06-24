@@ -38,7 +38,7 @@ public class MainMenuView extends View {
                 break;
             case 'H':
                 HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayMenu();
+                helpMenu.display();
                 break;
             case 'S':
                 ProgramControl.saveGame(DuchessOfDamascus.getCurrentGame());
@@ -59,8 +59,8 @@ public class MainMenuView extends View {
         GameControl.createNewGame(DuchessOfDamascus.getPlayer());
 
         //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        StartRoomView promptMessage = new StartRoomView();
+        promptMessage.display();
     }
 
 }
