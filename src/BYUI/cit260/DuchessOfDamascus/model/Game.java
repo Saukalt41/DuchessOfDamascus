@@ -18,18 +18,19 @@ public class Game implements Serializable{
     //Class Intance Variables
     private double time;
     private String timePlayed;
-//    private InventoryItem[] inventory;
+    private InventoryItem[] inventory;
     private Player player;
     private Wagon wagon;
     private Map map;
 
-//    public InventoryItem[] getInventory() {
-//        return inventory;
-//    }
-//
-//    public void setInventory(InventoryItem[] inventory) {
-//        this.inventory = inventory;
-//    }
+
+    public InventoryItem[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
+    }
 
     public Wagon getWagon() {
         return wagon;
@@ -103,17 +104,6 @@ public class Game implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //This will create a new player
     }
 
-//    public void setInventory(BYUI.cit260.DuchessOfDamascus.control.InventoryItem[] Inventory) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    public void createInventoryList() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    public void createInventoryList(GameControl.InventoryItem[] inventoryList) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
 
     
     
