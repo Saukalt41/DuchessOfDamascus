@@ -50,7 +50,20 @@ public class DuchessOfDamascus {
      */
     public static void main(String[] args) {
 
-        new StartProgramView().startProgram();
+      try{
+          java.awt.EventQueue.invokeLater(
+          new Runnable(){
+              @Override
+              public void run(){
+                  StartProgramFrame startProgramFrame = new StartProgramFrame();
+                  startProgramFrame.setVisible(true);
+              }
+          }
+          );
+          
+        return;  
+      } 
+      //  new StartProgramView().startProgram();
     }
 
     
