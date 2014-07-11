@@ -10,12 +10,12 @@ package StartProgramFrame;
  *
  * @author Blanco
  */
-public class StartProgramFrame extends javax.swing.JFrame {
+public class StartMenuFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form java
+     * Creates new form StartMenuFrame
      */
-    public StartProgramFrame() {
+    public StartMenuFrame() {
         initComponents();
     }
 
@@ -29,33 +29,44 @@ public class StartProgramFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setEnabled(false);
         getContentPane().setLayout(null);
 
-        jButton1.setText("Send");
+        jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
+        jButton1.setText("Start New Game");
         getContentPane().add(jButton1);
-        jButton1.setBounds(420, 420, 57, 23);
+        jButton1.setBounds(120, 150, 230, 50);
 
-        jButton2.setText("Quit");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(550, 420, 53, 23);
-
-        jTextField1.setText("Enter your name");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(420, 390, 180, 20);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/DuchessOfDamascus/pictures/This is the one.png"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(300, 20, 400, 350);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/DuchessOfDamascus/pictures/Background.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/DuchessOfDamascus/pictures/MainMenuTitle.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-430, 0, 1150, 580);
+        jLabel2.setBounds(10, 20, 440, 120);
+
+        jButton2.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
+        jButton2.setText("Load Saved Game");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(120, 230, 230, 50);
+
+        jButton3.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
+        jButton3.setText("Help");
+        getContentPane().add(jButton3);
+        jButton3.setBounds(120, 310, 230, 50);
+
+        jButton4.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
+        jButton4.setText("About");
+        getContentPane().add(jButton4);
+        jButton4.setBounds(120, 390, 230, 50);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/DuchessOfDamascus/pictures/Background.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-70, 0, 1150, 580);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -77,20 +88,20 @@ public class StartProgramFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            StartProgramFrame.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(StartProgramFrame.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartMenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            StartProgramFrame.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(StartProgramFrame.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartMenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            StartProgramFrame.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(StartProgramFrame.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartMenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            StartProgramFrame.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(StartProgramFrame.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StartMenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        StartProgramFrame.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StartProgramFrame().setVisible(true);
+                new StartMenuFrame().setVisible(true);
             }
         });
     }
@@ -98,8 +109,9 @@ public class StartProgramFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
