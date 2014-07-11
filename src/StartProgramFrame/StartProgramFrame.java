@@ -37,9 +37,9 @@ public class StartProgramFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("Send");
+        jButton1.setText("Start Game");
         getContentPane().add(jButton1);
-        jButton1.setBounds(420, 420, 57, 23);
+        jButton1.setBounds(430, 420, 87, 23);
 
         jButton2.setText("Quit");
         getContentPane().add(jButton2);
@@ -47,7 +47,7 @@ public class StartProgramFrame extends javax.swing.JFrame {
 
         jTextField1.setText("Enter your name");
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(420, 390, 180, 20);
+        jTextField1.setBounds(420, 390, 190, 20);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/DuchessOfDamascus/pictures/This is the one.png"))); // NOI18N
         getContentPane().add(jLabel3);
